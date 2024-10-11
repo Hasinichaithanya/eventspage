@@ -1,0 +1,42 @@
+.recommended-event-card {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  background-color: transparent;
+  width: 300px;
+}
+
+.event-image {
+  height: 350px;
+  width: 270px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.event-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -70px;
+  /* width: 170px; */
+}
+.event-details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 190px;
+  padding-right: 10px;
+}
+.make-agree {
+  font-size: 15px;
+}
+.address {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  font-size: 10px !important;
+}

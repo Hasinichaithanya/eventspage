@@ -1,0 +1,44 @@
+.home-container {
+  background-image: url("../../public/Front\ screen.svg");
+  min-height: 100vh;
+  background-size: cover;
+  margin-top: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-main-heading {
+  width: 70%;
+  color: white;
+  font-size: 50px;
+  font-weight: 100 !important;
+}
+p {
+  width: 50%;
+  color: #989090;
+}
+@media (max-width: 650px) {
+  .home-main-heading {
+    font-size: 27px;
+    width: 85%;
+  }
+  p {
+    width: 95%;
+  }
+}
+@media (min-width: 651px) and (max-width: 800px) {
+  .home-main-heading {
+    width: 82% !important;
+    font-size: 35px;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 800px), (min-height: 1000px) {
+  .home-main-heading,
+  p {
+    position: relative;
+    top: -100px;
+  }
+}
