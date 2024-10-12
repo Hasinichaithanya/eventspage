@@ -13,7 +13,6 @@ function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
     const isLogged = Cookies.get("userLoggedIn");
-    console.log(isLoggedIn, isLogged == undefined);
 
     setIsLoggedIn(isLogged);
   });

@@ -10,10 +10,10 @@ function Upcoming() {
   const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
+  const [hasMore, setHasMore] = useState(false);
 
   useEffect(() => {
-    // console.log("useEffect called", page);
+    console.log("useEffect called", page);
     const fetchData = async () => {
       setIsLoading(true);
       try {
@@ -23,12 +23,14 @@ function Upcoming() {
         const data = await response.json();
         setUpcomingEvents((prev) => [...prev, ...data.events]);
         setIsLoading(false);
+        setHasMore(true);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 1000);
   }, [page]);
 
   const fetchMoreData = () => {
@@ -37,9 +39,9 @@ function Upcoming() {
     } else if (!isLoading && hasMore) {
       setPage((prev) => prev + 1);
     }
-    // console.log("hasmore", hasMore, upcomingEvents.length === 44);
+    console.log("Hi");
   };
-  // console.log("hasmore", hasMore);
+  console.log(upcomingEvents);
   return (
     <div className="upcoming-events-container">
       <div className="upcoming-heading-container">
