@@ -1,13 +1,16 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import RecommendedEventCard from "../RecommendedEventCard/RecommendedEventCard";
+import SamplePrevArrow from "../Arrows/PrevArrow";
+import SampleNextArrow from "../Arrows/NextArrow";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./recommended.css";
+
 var settings = {
   dots: false,
-  arrows: false,
+  // arrows: false,
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 4,
@@ -17,6 +20,9 @@ var settings = {
   autoplaySpeed: 3000,
   cssEase: "linear",
   pauseOnHover: true,
+  swipeToSlide: true,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
   responsive: [
     {
       breakpoint: 1024,
@@ -55,7 +61,7 @@ function Recommended() {
       const data = await response.json();
       setRecommendedEvents(data.events);
       setIsloading(false);
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, []);
@@ -70,7 +76,9 @@ function Recommended() {
       </div>
       <div className="slider-container">
         {isLoading ? (
-          <div className="loader"></div>
+          <div className="loader-container">
+            <div className="loader"></div>
+          </div>
         ) : (
           <Slider {...settings}>
             {recommendedEvents.map((event) => (

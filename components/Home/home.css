@@ -1,5 +1,7 @@
 .home-container {
-  background-image: url("../../public/Front\ screen.svg");
+  background-image: url("/Front\ screen.svg");
+  /* background-image: url("https://drive.google.com/thumbnail?id=1pml4-sRk2P02hGO-SQoLfD1ie-2pWU2g"); */
+
   min-height: 100vh;
   background-size: cover;
   margin-top: 0;

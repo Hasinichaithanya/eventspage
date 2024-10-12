@@ -19,7 +19,7 @@ const years = [
 ];
 function UpcomingEventCard(props) {
   const { event } = props;
-  //   console.log(event);
+  // console.log(event);
   const { cityName, date, distanceKm, eventName, imgUrl, weather } = event;
   let idx = imgUrl.split("/d/")[1].split("/view")[0];
   const d = new Date(date);

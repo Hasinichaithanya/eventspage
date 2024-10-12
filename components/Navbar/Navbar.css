@@ -6,6 +6,7 @@
 }
 .logo-name {
   color: #cf2d2d;
+  /* text-decoration: none !important; */
 }
 .search-categories-container {
   margin-top: 0px;
@@ -45,6 +46,10 @@
   padding: 10px;
   background-color: transparent;
   border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #989090 !important;
+  font-family: inter;
 }
 .nav-2 {
   gap: 10px;

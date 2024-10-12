@@ -26,13 +26,17 @@
   color: white;
 }
 .slider-container {
-  /* max-width: 100vw; */
+  max-width: 90vw;
   margin-left: 5%;
 }
-
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
 .loader {
   margin-top: 100px;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,9 +56,15 @@
     transform: rotate(360deg);
   }
 }
-@media (max-width: 800px), (min-height: 1000px) {
+@media (max-width: 800px) {
   .recommended-events-container {
     position: relative;
     top: -200px;
+  }
+  .loader {
+    margin-top: 200px;
+  }
+  .slider-container {
+    max-width: 80vw;
   }
 }

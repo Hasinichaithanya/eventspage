@@ -1,16 +1,18 @@
 // import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Home from "../components/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
-import Recommended from "../components/Recommended/Recommended";
-
-import Upcoming from "../components/Upcoming/Upcoming";
+import Login from "../components/Login/Login";
+import SignUp from "../components/SignUp/SignUp";
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <Recommended />
-      <Upcoming />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />{" "}
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </>
   );
 }

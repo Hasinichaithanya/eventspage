@@ -48,9 +48,9 @@
     width: 90vw;
   }
 }
-@media (max-width: 800px), (min-height: 1000px) {
+/* @media (max-width: 800px), (min-height: 1000px) {
   .upcoming-events-container {
     position: relative;
     top: -190px;
   }
-}
+} */

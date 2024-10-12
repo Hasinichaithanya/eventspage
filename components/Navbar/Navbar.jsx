@@ -4,14 +4,26 @@ import { MdOutlineFavorite } from "react-icons/md";
 import { IoPerson } from "react-icons/io5";
 import { TiLocation } from "react-icons/ti";
 import { FaAngleRight } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Cookies from "js-cookie";
+
+import { useEffect, useState } from "react";
 function Navbar() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    const isLogged = Cookies.get("userLoggedIn");
+    console.log(isLoggedIn, isLogged == undefined);
+
+    setIsLoggedIn(isLogged);
+  });
   return (
     <div>
       <div className="nav-1">
         <div className="logo-container">
-          <b className="logo-name">BookUsNow</b>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <b className="logo-name">BookUsNow</b>
+          </Link>
           <span className="address">
             <TiLocation />
             Mumbai,India <FaAngleRight />
@@ -31,13 +43,24 @@ function Navbar() {
         <div className="nav-1 search-categories-container fav-container-md">
           <MdOutlineFavorite className="fav-icon" />
           <span>Favourites</span>
-          <button className="sign-in-btn">Sign In</button>
+          {isLoggedIn === false ||
+            (isLoggedIn == undefined && (
+              <Link to="/signup">
+                {isLoggedIn == undefined}
+                <button className="sign-in-btn">Sign In </button>
+              </Link>
+            ))}
         </div>
         <div className="nav-1 search-categories-container fav-container-sm">
           {" "}
           <IoMdSearch className="fav-icon" />
           <MdOutlineFavorite className="fav-icon" />
-          <IoPerson className="fav-icon" />
+          {isLoggedIn === false ||
+            (isLoggedIn == undefined && (
+              <Link to="/signup">
+                <IoPerson className="fav-icon" />{" "}
+              </Link>
+            ))}
         </div>
       </div>
       <div className="nav-1 nav-2">
