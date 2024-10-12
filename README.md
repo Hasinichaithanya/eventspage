@@ -1,8 +1,15 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This page gives the details about the events, you can see the upcoming events also.
+I used lazy loading for the upcoming events to optimize the performance of the page.
 
-Currently, two official plugins are available:
+I used react-slick to display the recommended events.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Follow the below commands in your terminal to get live in your localhost!
+
+- `git clone https://github.com/Hasinichaithanya/eventspage.git`
+- `cd eventspage`
+- `npm install`
+- `npm run dev`
+
+### That is it, open your terminal, you can see the link for your output, click on it.
